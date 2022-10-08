@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+:root {
+  --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+  --GrayishBlue: hsl(212, 23%, 69%);
+  --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+  background-color: var(--LightGrayishBlue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawers-img {
+  width: 332px;
+  height: 348px;
+  border-radius: 12px 0 0 12px;
+}
+.container {
+  width: 822px;
+  height: 348px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 12px;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32rem;
+  padding: 19px 35px;
+  position: relative;
+}
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avatar img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.desc-para {
+  font-size: 15px;
+  line-height: 22px;
+  margin: 13px 0;
+  font-weight: 500;
+  color: var(--DesaturatedDarkBlue);
+}
+h1 {
+  font-size: 24px;
+  width: 98%;
+  color: var(--VeryDarkGrayishBlue);
+  font-weight: 700;
+  margin-top: 25px;
+}
+.avatar-info p {
+  color: var(--DesaturatedDarkBlue);
+}
+.avatar-info h3 {
+  color: var(--VeryDarkGrayishBlue);
+  font-weight: 700;
+}
+.share {
+  width: 34px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--LightGrayishBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.onhover {
+  filter: brightness(0) invert(1);
+}
+.onhoverbg {
+  background-color: var(--DesaturatedDarkBlue);
+}
+
+.share-icons {
+  position: absolute;
+  right: -51px;
+  bottom: 121px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--DesaturatedDarkBlue);
+  width: 200px;
+  height: 59px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.share-icons::after {
+  content: "";
+  position: absolute;
+  background-color: var(--DesaturatedDarkBlue);
+  bottom: -10px;
+  left: 44%;
+  width: 20px;
+  height: 10px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.share-icons p {
+  color: var(--GrayishBlue);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.mobile {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 901px) and (min-width: 611px) {
+  body {
+    background-color: var(--LightGrayishBlue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+  }
+}
+
+/* for mobile designs */
+
+@media (max-width: 611px) {
+  body {
+    background-color: var(--LightGrayishBlue);
+    height: 100vh;
+    width: 144%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    width: 392px;
+    height: 772px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+  }
+  .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 27rem;
+    padding: 19px 43px;
+    position: relative;
+  }
+  .drawers-img {
+    width: 392px;
+    height: 365px;
+    border-radius: 12px 12px 0 0;
+  }
+  h1 {
+    font-size: 21px;
+    width: 100%;
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 700;
+    margin-top: 25px;
+  }
+  .desc-para {
+    width: 18.5rem;
+    font-size: 15px;
+    line-height: 22px;
+    margin: 30px 0;
+    font-weight: 500;
+    color: var(--DesaturatedDarkBlue);
+  }
+
+  .share-icons {
+    position: absolute;
+    left: 20px;
+    bottom: 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--DesaturatedDarkBlue);
+    width: 392px;
+    height: 87px;
+    padding: 10px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .share-icons::after {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .mobile-hover-bg {
+    background-color: var(--GrayishBlue);
+  }
+}
